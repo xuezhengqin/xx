@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+	<!--定义标签版本库-->
+	<tlib-version>1.0</tlib-version>
+	<!--定义jsp版本库-->
+	<jsp-version>1.2</jsp-version>
+	<!--定义标签库短名称-->
+	<short-name>sinovatech</short-name>
+	<!-- 标签描述 -->
+	<description>
+		This tag library contains tag extensions for the Remend Web
+		Application
+	</description>
+	<!-- 验证码 -->
+	<tag>
+		<name>verifyimage</name>
+		<tag-class>com.sinovatech.common.web.taglib.ImageTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>align</name>
+			<required>true</required><!--value={left,right,center,absbottom} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>border</name>
+			<required>true</required><!--value={0,1,2} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>path</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>title</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rgb</name>
+			<required>true</required><!--value={0|0|0,255|255|255} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>x</name>
+			<required>true</required><!--value={5,6,7} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>y</name>
+			<required>true</required><!--value={12,13,14} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>size</name>
+			<required>true</required><!--value={12,13,14} -->
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 方本转换字符集 -->
+	<tag>
+		<name>text</name>
+		<tag-class>com.sinovatech.mactivity.web.taglib.StringFormatConverTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>targerCoding</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>sourceCoding</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 分页 -->
+	<tag>
+		<name>paginate</name>
+		<tag-class>com.sinovatech.mactivity.web.taglib.PaginationTag</tag-class>
+		<attribute>
+			<name>source</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>targer</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>pageNum</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rowNum</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>href</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>	
+	<!-- 日期格式化 -->
+	<tag>
+		<name>format</name>
+		<tag-class>com.sinovatech.mactivity.web.taglib.FormatDateTag</tag-class>
+		<attribute>
+			<name>date</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>format</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>bool</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 月份输出 -->
+	<tag>
+		<name>months</name>
+		<tag-class>com.sinovatech.mactivity.web.taglib.MonthTag</tag-class>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>space</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 当前月 -->
+	<tag>
+		<name>currentMonths</name>
+		<tag-class>com.sinovatech.mactivity.web.taglib.CurrentMonthTag</tag-class>
+		<attribute>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>space</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		   <name>isFive</name>
+		   <required>false</required>
+		   <rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		   <name>limitedDay</name>
+		   <required>false</required>
+		   <rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		   <name>limitedHour</name>
+		   <required>false</required>
+		   <rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- -->
+	<tag>
+		<name>requPara</name>
+		<tag-class>com.sinovatech.mactivity.web.taglib.RequParaTag</tag-class>
+		<attribute>
+			<name>date</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>beginVar</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>endVar</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>var</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>format</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>plimt</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+	</tag>
+	<!-- 日期转换（从字符串到日期） -->
+	<tag>
+	<name>toDate</name>
+        <tag-class>com.sinovatech.mactivity.web.taglib.ConverToDateTag</tag-class>
+		<attribute>
+			<name>strDate</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>format</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>var</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>toStr</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		
+	</tag>
+	<!-- 是否是触屏版显示代码 -->
+	<tag>
+		<name>jspView</name>
+		<tag-class>com.sinovatech.mactivity.wap.taglib.JspViewTag</tag-class>
+		<attribute>
+			<name>channel</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				WAP -- Only wap can pass.
+				CLIENT -- Both android and iphone can pass.
+				113000001 -- Only wap can pass.
+				113000004 -- Only iphone can pass.
+				113000005 -- Only android can pass.
+			</description>
+		</attribute>
+	</tag>
+
+    <tag>
+        <name>javascript</name>
+        <tag-class>com.sinovatech.mactivity.wap.taglib.JavascriptTag</tag-class>
+        <description>
+            <![CDATA[ exp: <u:javascript basePath="https://img.client.10010.com/mobileService/view/client/js" filePath="base.js,baseNew.js"/> ]]>
+        </description>
+        <attribute>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <description>
+                Javascript common path.
+                exp:
+                    http://xxx/js/a.js
+                    http://xxx/js/b.js
+                    both a and b common path is "http://xxx/js"
+            </description>
+        </attribute>
+        <attribute>
+            <name>filePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <description> Javascript file paths, Multiple files in order to separate（,）; </description>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>style</name>
+        <tag-class>com.sinovatech.mactivity.wap.taglib.CSSTag</tag-class>
+        <description>
+            <![CDATA[ exp: <u:style basePath="https://img.client.10010.com/mobileService/view/client/css" filePath="base.css,index.css"/> ]]>
+        </description>
+        <attribute>
+            <name>basePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <description>
+                css file common path.
+                exp:
+                http://xxx/css/a.css
+                http://xxx/css/b.css
+                both a and b common path is "http://xxx/css"
+            </description>
+        </attribute>
+        <attribute>
+            <name>filePath</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <description> css file paths, Multiple files in order to separate（,）; </description>
+        </attribute>
+    </tag>
+</taglib>
